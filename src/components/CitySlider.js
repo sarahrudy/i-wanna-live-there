@@ -4,9 +4,9 @@ import '../styles/CitySlider.css';
 const CitySlider = () => {
 
   return(
-    <div className='slider-container'>
-      <p>Slider</p>
-    </div>
+    <article className='slider-container'>
+      <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Denver_skyline.jpg/1200px-Denver_skyline.jpg' alt='Denver Colorado' />
+    </article>
   )
 };
 
