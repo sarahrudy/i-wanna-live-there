@@ -1,6 +1,6 @@
 import { React, Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import '../App.css';
+import '../styles/App.css';
 import Nav from './Nav';
 import MainContent from './MainContent';
 import SearchBar from './SearchBar';
@@ -23,12 +23,14 @@ class App extends Component {
           path='/' 
           render={() => {
             return(
-              <Nav />
-              <CitySlider />
-              <SearchBar />
-              <MainContent />
-              <CitiesContainer />
-              <CityDetails />
+              <main className='all-content'>
+                <Nav />
+                <CitySlider />
+                <SearchBar />
+                <MainContent />
+                <CitiesContainer />
+                <CityDetails />
+              </main>
               )
             }
           }

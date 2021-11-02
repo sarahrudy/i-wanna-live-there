@@ -1,11 +1,11 @@
 import React from "react";
-import '../CitySlider.css';
+import '../styles/CitySlider.css';
 
 const CitySlider = () => {
 
   return(
     <div>
-      
+      <p>Slider</p>
     </div>
   )
 };
