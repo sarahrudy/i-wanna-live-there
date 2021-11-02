@@ -1,10 +1,9 @@
 import { React, Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import '../styles/App.css';
 import Nav from './Nav';
 import MainContent from './MainContent';
 import SearchBar from './SearchBar';
-import CitiesContainer from './CitiesContainer';
 import CityDetails from './CityDetails';
 import CitySlider from './CitySlider';
 
@@ -17,7 +16,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className='App'>
+      <div className='app'>
         <Route 
           exact 
           path='/' 
@@ -28,8 +27,7 @@ class App extends Component {
                 <CitySlider />
                 <SearchBar />
                 <MainContent />
-                <CitiesContainer />
-                <CityDetails />
+                <Route exact path='/:cityId' render={() => <CityDetails />} />
               </main>
               )
             }

@@ -5,7 +5,7 @@ const CityDetails = () => {
 
   return(
     <section>
-      
+      <p>Details about a specific city</p>
     </section>
   )
 };

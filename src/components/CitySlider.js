@@ -4,7 +4,7 @@ import '../styles/CitySlider.css';
 const CitySlider = () => {
 
   return(
-    <div>
+    <div className='slider-container'>
       <p>Slider</p>
     </div>
   )
