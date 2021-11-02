@@ -6,6 +6,7 @@ const MainContent = () => {
 
   return(
     <section className='main-content'>
+      <h2>All Cities</h2>
       <CitiesContainer />
     </section>
   )

@@ -4,17 +4,23 @@ import CityCards from './CityCards';
 import { Link } from 'react-router-dom';
 
 const CitiesContainer = () => {
+  // const cards = cityInfo.map((city) => {
+  //   return (
+  //   <Link to={`/${city.id}`} key={city.id}>
+  //     <CityCards img={} cityName={} info={} />
+  //   </Link>
+  //   )
+  // })
 
   return(
     <section className='cities-container'>
-      {/* <Link to={`/${city.id}`}> */}
-        <CityCards />
-        <CityCards />
-        <CityCards />
-        <CityCards />
-        <CityCards />
-        <CityCards />
-      {/* </Link> */}
+      {/* {cards} */}
+      <CityCards />
+      <CityCards />
+      <CityCards />
+      <CityCards />
+      <CityCards />
+      <CityCards />
     </section>
   )
 };
