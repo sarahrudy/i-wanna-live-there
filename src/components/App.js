@@ -16,7 +16,7 @@ class App extends Component {
     }
   }
 
-  // componentDidMount() {
+  // getAllCities = () => {
   //   fetch('path')
   //   .then(response => response.json())
   //   .then(data => this.setState({ allCities: data }))
