@@ -4,6 +4,7 @@ import Nav from './Nav';
 import MainContent from './MainContent';
 import SearchBar from './SearchBar';
 import CitiesContainer from './CitiesContainer';
+import CityDetails from './CityDetails';
 
 class App extends Component {
   constructor() {
@@ -18,6 +19,7 @@ class App extends Component {
       <SearchBar />
       <MainContent />
       <CitiesContainer />
+      <CityDetails />
     </div>
   );
 }

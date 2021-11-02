@@ -1,5 +1,5 @@
 import React from "react";
-import CitiesContainer from './CitiesContainer';
+import '../CitiesContainer.css';
 
 const CitiesContainer = () => {
 
