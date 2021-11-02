@@ -11,9 +11,18 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-
+      allCities: [],
+      sliderCity: {},
     }
   }
+
+  // componentDidMount() {
+  //   fetch('path')
+  //   .then(response => response.json())
+  //   .then(data => this.setState({ allCities: data }))
+  //   .catch(error => console.log(error))
+  // };
+
   render() {
     return (
       <div className='app'>
@@ -24,7 +33,9 @@ class App extends Component {
             return(
               <main className='all-content'>
                 <Nav />
+                {/* <Link to={`/${city.id}`}> */}
                 <CitySlider />
+                {/* </Link> */}
                 <SearchBar />
                 <MainContent />
                 <Route exact path='/:cityId' render={() => <CityDetails />} />
