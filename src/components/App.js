@@ -3,9 +3,8 @@ import { Route, Switch, Link } from 'react-router-dom';
 import '../styles/App.css';
 import Nav from './Nav';
 import MainContent from './MainContent';
-import SearchBar from './SearchBar';
 import CityDetails from './CityDetails';
-import CitySlider from './CitySlider';
+
 
 class App extends Component {
   constructor() {
@@ -33,10 +32,6 @@ class App extends Component {
             return(
               <main className='all-content'>
                 <Nav />
-                {/* <Link to={`/${city.id}`}> */}
-                <CitySlider />
-                {/* </Link> */}
-                <SearchBar />
                 <MainContent />
                 <Route exact path='/:cityId' render={() => <CityDetails />} />
               </main>
