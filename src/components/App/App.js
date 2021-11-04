@@ -1,17 +1,21 @@
-import { React, Component } from 'react';
+import React, { Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
-import '../styles/App.css';
-import Nav from './Nav';
-import MainContent from './MainContent';
-import CityDetails from './CityDetails';
+import './App.css';
+import Nav from '../Nav/Nav';
+import MainContent from '../MainContent/MainContent';
+import CityDetails from '../CityDetails/CityDetails';
+import CitySlider from '../CitySlider/CitySlider';
+import SearchBar from '../SearchBar/SearchBar';
+import CitiesContainer from '../CitiesContainer/CitiesContainer';
+import { mockData } from '../../mockData';
 
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      allCities: [],
-      sliderCity: {},
+      allCities: mockData.cities,
+      // cityImages: mockData.cities
     }
   }
 
@@ -23,6 +27,7 @@ class App extends Component {
   // };
 
   render() {
+    console.log(this.state.allCities)
     return (
       <div className='app'>
         <Route 
@@ -32,7 +37,9 @@ class App extends Component {
             return(
               <main className='all-content'>
                 <Nav />
-                <MainContent />
+                <CitySlider cities={this.state.allCities}/>
+                <SearchBar />
+                <CitiesContainer cities={this.state.allCities}/>
                 <Route exact path='/:cityId' render={() => <CityDetails />} />
               </main>
               )
