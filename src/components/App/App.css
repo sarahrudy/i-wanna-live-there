@@ -1,21 +1,16 @@
-.app {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  height: 98vh;
-  width: 95vw;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-.all-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-
+body,
+html {
+  background: #484f58;
+  color: #f0f6fc;
 }
 
-
-
-p {
-  margin: 0%;
+main {
+  background-image: url('../../images/city-lights-background-image.png');
 }

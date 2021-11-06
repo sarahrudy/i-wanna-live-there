@@ -1,0 +1,9 @@
+.cities-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cities {
+  margin: 10px;
+}
