@@ -2,12 +2,12 @@ import React from 'react';
 import './Nav.css';
 
 const Nav = () => {
-
   return(
-    <nav className='navigation'>
-      <h1>I Wanna Live There</h1>
-      <p>Navigation Links</p>
-    </nav>
+    <header>
+      <h1>softWhere?</h1>
+      <p>Best Cities to live as a Software Developer</p>
+      <hr />
+    </header>
   )
 };
 
