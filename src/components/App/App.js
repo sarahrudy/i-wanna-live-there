@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from '../Nav/Nav';
 import Cities from '../Cities/Cities';
+import SearchBar from '../SearchBar/SearchBar'
 import { cityData } from '../../cityData';
 
 
@@ -24,7 +25,10 @@ class App extends Component {
     return (
       <main className='app'>
         <Nav />
+        <div className="main-container">
+        <SearchBar />
         <Cities className="city-cards" cities={this.state.cities} />
+        </div>
       </main>
     );
   }
