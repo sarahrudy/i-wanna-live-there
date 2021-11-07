@@ -3,23 +3,23 @@ import './App.css';
 import Nav from '../Nav/Nav';
 import Cities from '../Cities/Cities';
 import SearchBar from '../SearchBar/SearchBar'
-import { cityData } from '../../cityData';
-
+import CityDetails from '../CityDetails/CityDetails'
+import { getAllCities } from '../../apiCalls'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      cities: cityData.cities,
+      cities: [],
     }
   }
 
-  // getAllCities = () => {
-  //   fetch('path')
-  //   .then(response => response.json())
-  //   .then(data => this.setState({ cities: data }))
-  //   .catch(error => console.log(error))
-  // };
+  componentDidMount = () => {
+    getAllCities() 
+      .then(data => this.setState({ cities: data }))
+      .catch(error => console.log(error))
+  }
+  
 
   render() {
     return (
@@ -28,6 +28,7 @@ class App extends Component {
         <div className="main-container">
         <SearchBar />
         <Cities className="city-cards" cities={this.state.cities} />
+        <CityDetails details={this.state.cities} />
         </div>
       </main>
     );
