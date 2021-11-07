@@ -23,4 +23,12 @@ describe('App Home Page', () => {
     .contains("Raleigh").click().url().should('include', 'http://localhost:3000/3');
   });
 
+
+  it('User should be able to type in the search bar and see the cities filtered on the page', () => {
+    cy.get('input[type=searchbar]').type('D')
+    cy.get('.cities-container').children().should('have.length', 3)
+
+    cy.get('input[type=searchbar]').type('e')
+    cy.get('.cities-container').children().should('have.length', 1)
+  })
 });
