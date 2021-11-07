@@ -20,13 +20,21 @@ class App extends Component {
       .catch(error => console.log(error))
   }
 
+  handleChange = (e) => {
+    this.setState({ search: e.target.value });
+  }
+
+  searchCities = (e) => {
+    let searchingCities = this.state.cities.filter(city => city.city.toLowerCase().includes(this.state.search.toLowerCase()));
+    return this.setState({ cities: searchingCities });
+  }
 
   render() {
     return (
-      <main className='app'>
+      <main className="app">
         <Nav />
         <div className="main-container">
-        <SearchBar />
+        <SearchBar search={this.state.search} searchCities={this.searchCities} />
         <Cities className="city-cards" cities={this.state.cities} />
         <CityDetails details={this.state.cities} />
         </div>
