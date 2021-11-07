@@ -10,7 +10,7 @@ describe('App Home Page', () => {
 
   it('User should see a header containing the app title and description', () => {
     cy.get('header').first().contains('softWhere?');
-    cy.get('header').last().contains('Best US Cities to Live as a Software Developer');
+    cy.get('header').last().contains('Top US Cities to Live as a Software Developer');
   });
 
   it('User should see all available city cards when the page loads', () => {
