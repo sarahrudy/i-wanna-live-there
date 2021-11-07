@@ -15,11 +15,11 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    getAllCities() 
+    getAllCities()
       .then(data => this.setState({ cities: data }))
       .catch(error => console.log(error))
   }
-  
+
 
   render() {
     return (

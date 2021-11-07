@@ -1,13 +1,21 @@
-import React from "react";
+import React from 'react';
 import './SearchBar.css';
 
-// this will probably need to be a class component since it will hold its own state
-const SearchBar = () => {
-
+const SearchBar = ({ search, searchCities }) => {
   return(
     <div>
-      <input type='searchbar' className='search-bar' placeholder='Search cities here...' />
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="Search cities here..."
+        value={search}
+        onChange={event => searchCities(event)}
+      />
+      <input
+        type="submit"
+      />
     </div>
   )
 }
+
 export default SearchBar;
