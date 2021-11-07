@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from '../Nav/Nav';
 import Cities from '../Cities/Cities';
-import SearchBar from '../SearchBar/SearchBar'
-import CityDetails from '../CityDetails/CityDetails'
-import { getAllCities } from '../../apiCalls'
+import SearchBar from '../SearchBar/SearchBar';
+import CityDetails from '../CityDetails/CityDetails';
+import { getAllCities } from '../../apiCalls';
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
       cities: [],
-      search: ''
+      search: '',
+      searchedCities: {}
     }
   }
 
@@ -22,14 +23,12 @@ class App extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({ search: e.target.value });
+    this.setState({ searchedCities: this.searchCities(e.target.value) });
   }
 
-  searchCities = (e) => {
-    let searchingCities = this.state.cities.filter(city => {
-      console.log(city.city);
-      return city.city.toLowerCase().includes(this.state.search.toLowerCase())
-    });
+  searchCities = (string) => {
+    console.log('seach bar value in Search Cities', string);
+    let searchingCities = this.state.cities.filter(city => city.city.toLowerCase().includes(string.toLowerCase()));
     return this.setState({ cities: searchingCities });
   }
 
@@ -38,7 +37,7 @@ class App extends Component {
       <main className="app">
         <Nav />
         <div className="main-container">
-        <SearchBar search={this.state.search} searchCities={this.searchCities} />
+        <SearchBar search={this.state.search} handleChange={this.handleChange} />
         <Cities className="city-cards" cities={this.state.cities} />
         <CityDetails details={this.state.cities} />
         </div>
