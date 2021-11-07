@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       cities: [],
       search: '',
-      searchedCities: {}
+      searchedCities: []
     }
   }
 
@@ -26,9 +26,15 @@ class App extends Component {
     this.setState({ searchedCities: this.searchCities(e.target.value) });
   }
 
+  // componentDidUpdate() {
+  //   if (this.state.searchedCities !== this.state.cities) {
+  //     this.state.cities = this.searchedCities;
+  //   }
+  // }
+
   searchCities = (string) => {
     console.log('seach bar value in Search Cities', string);
-    let searchingCities = this.state.cities.filter(city => city.city.toLowerCase().includes(string.toLowerCase()));
+    let searchingCities = this.state.cities.filter(city => city.city_and_state.toLowerCase().startsWith(string.toLowerCase()));
     return this.setState({ cities: searchingCities });
   }
 
