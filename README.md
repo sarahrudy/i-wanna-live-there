@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# I Wanna Live There
+I Wanna Live There is an app to help developers find cities that cater to their needs.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Repo
+[Rancid Tomatillos](https://github.com/lokiandfengshui/rancid-tomatillos)
+Link to Back End Repo
 
-## Available Scripts
+## Deployed Link
 
-In the project directory, you can run:
 
-### `npm start`
+## Contributors
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Elise Beall](https://github.com/elisebeall)
+- [Sarah Rudy](https://github.com/sarahrudy)
+- [Logan Vincent](https://github.com/Logandv3)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Created with [Create React App](https://github.com/facebook/create-react-app)
+* Code: JavaScript, Express.js, Knex.js, Node.js, PostgreSQL, ReactRouter
+* Testing: Cypress
+* Compiler: Webpack
+* Linter: eslint
+* Debugging: Chrome Dev Tools
+* Version Control/Management: Git/Github/Github Projects
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Fork this web app to your own Github account
+- Clone the repository to your local machine
+- `cd` into the file
+- run `npm install`.
+- Run `npm start` and visit `localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Learning Goals
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Team Goals:
+- Incorporate new technologies to practice self learning 
+- Create a functional API and database
+- Test user flow and API requests
+- Create a multi-page UX using Router
+---
+Elise:
+- 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Sarah:
+- 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Logan:
+- 
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Evolution of I Wanna Live There
+None of the team members on this project had ever worked with backend technologies when we began.  We decided on an idea for our app and did some individual research on how different front-end and back-end technologies communicate and work together.  We came together and worked together to practice creating an API that can visit web sites and scrape data and host that data.  This gave us a little more insight to how Express works and how to use Heroku to host an API.  We created the basic React component architecture and layout to use the data, then set out to create a database.  We chose to use Knex as our ORM/ query and builder.  It took quite a while to figure out the moving parts and which technology was responsible for which part of the process.  All of these technologies are meant to work together using Node/JavaScript but there was a lot of configuration and syntax to learn, not to mention the difficulty of debugging/ tracking errors between so many technologies.  Once we figured out how to control control our database using our Knex and express files we had to connect it to our API.  This was posed many more problems than we anticipated.  We ended up splitting up to research and try different methods and it took quite a bit of time.  Once we got the API and database working together properly we returned to this react app to display our data for a user to interact with.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to Use
 
-### Code Splitting
+- When the user loads the page they will see an input field to search for cities and a display of all available cities.
+Home Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- If the user wants to know more details about a particular city they can click directly on that city's image and the app will render a page with more details. 
+- The detail page has various data (ex. cost of living, population, software dev salaries, cool things about that city etc.)  When the user wishes to return to the main page they can click the back button or go back in their browser.
+City Details
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- The user can search for a certain city using the search bar.
+GIF of search functionality?
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Wins
 
-### Advanced Configuration
+- 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Challenges
 
-### Deployment
+- Learning the responsibilites of each technoloy and the associated syntax
+- Connecting the PostgreSQL database to Heroku correctly
+- Debugging and tracking errors through the different technologies
+- 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Reflections
 
-### `npm run build` fails to minify
+- 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Additions
+
+- We would like to be able to filter or rank cities based on an individual user and their preferences.
+- We would like to be able to search based on specific details or categories.
+- We would like a user to be able to save their favorite cities. 
+
+
