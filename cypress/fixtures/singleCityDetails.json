@@ -1,0 +1,20 @@
+[
+  {
+  "id": 3,
+  "city": "Raleigh",
+  "state": "North Carolina",
+  "city_and_state": "Raleigh, NC",
+  "image": "https://i.postimg.cc/mgsYpc6x/raleigh.jpg",
+  "num_on_best_paying_cities_list": 17,
+  "median_software_developer_salary_adj": 107676,
+  "median_income_of_all_jobs": 52580,
+  "num_software_developer_jobs": 12560,
+  "median_home_price": 267200,
+  "big_companies": "{\"IBM\",\"Wells Fargo\",\"Red Hat\",\"Metropolitan Life Insurance\",\"SAS Institute\"}",
+  "population_2019": 474069,
+  "population_change_since_2020": "\"+71.7%\"",
+  "city_blurb": "Raleigh is and affordable city overflowing with in-demand tech talent. At least that’s what hatch I.T. found when conducting a talent market analysis for a client looking for the optimal location to open another office. Located in the North Carolina Research Triangle, Raleigh is a major east coast tech hub, which explains why it has consistently placed in the top 3 on the index every year. This year, slightly falling from No. 2 to No. 3, Raleigh remains tough to beat. </br> The fact is that talent in this area flock to the startups and the startups need the talent. With multiple universities, including NC State, and plenty of community colleges within throwing distance, a qualified workforce is at the ready. Forbes recently reported that NC State is ranked No. 10 in the nation for entrepreneurship due to its unique programs like the Entrepreneurship Garage and the Entrepreneurship Clinic where students work side-by-side with real-world startups. Over the past five years, NC State has produced more than 170 university startups attracting $1.7 billion in venture capital. </br> And you don’t have to empty your savings to put down roots here. The cost of living in Raleigh is about 4% lower than the national average, with IT pros being paid a median salary of $93,781. The cost of living per month for one person in Raleigh is $2,743. For comparison, Washington, D.C., is $5,206. And that works both ways. Companies doing business in Raleigh enjoy lower operational costs as well.",
+  "created_at": "2021-11-07T01:13:12.964Z",
+  "updated_at": "2021-11-07T01:13:12.964Z"
+  }
+  ]
