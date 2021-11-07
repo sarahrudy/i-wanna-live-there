@@ -11,6 +11,7 @@ class App extends Component {
     super()
     this.state = {
       cities: [],
+      search: ''
     }
   }
 
@@ -25,7 +26,10 @@ class App extends Component {
   }
 
   searchCities = (e) => {
-    let searchingCities = this.state.cities.filter(city => city.city.toLowerCase().includes(this.state.search.toLowerCase()));
+    let searchingCities = this.state.cities.filter(city => {
+      console.log(city.city);
+      return city.city.toLowerCase().includes(this.state.search.toLowerCase())
+    });
     return this.setState({ cities: searchingCities });
   }
 
