@@ -8,7 +8,7 @@ describe('API Sad Paths', () => {
     
     cy.visit("http://localhost:3000");
     cy.get('.error-msg')
-    .contains('Error for server')
+    .contains('Sorry...something went wrong with the server')
   });
 
   it('Should show an error when there is a client issue fetching all cities', () => {
@@ -30,7 +30,7 @@ describe('API Sad Paths', () => {
 
     cy.visit("http://localhost:3000/3");
     cy.get('.error-msg')
-    .contains('Error for server')
+    .contains('Sorry...something went wrong with the server')
   });
 
   it('Should show an error when there is a client issue fetching a specific city', () => {
