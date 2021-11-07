@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body,
+html {
+  background: #484f58;
+  color: #f0f6fc;
+}
+
+main {
+  background-image: url('../../images/city-lights-background-image.png');
+}

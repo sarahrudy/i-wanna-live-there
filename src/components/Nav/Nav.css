@@ -1,0 +1,22 @@
+.nav-container {
+  height: 15vh;
+  width: 100%;
+  padding: 10px;
+  background-color: none;
+  background:transparent;
+  border-bottom: solid 1px #b1bac4;
+  /* position: fixed; */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-h1 {
+  margin-left: 10px;
+  width: auto;
+  font-size: 5vh;
+  color: #F3F4F6;
+}
+
+.nav-p {
+  margin: 10px 0 10px 10px;
+  font-size: 3vh;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/CityDetails.css';
+import './CityDetails.css';
 
 const CityDetails = () => {
 
