@@ -2,7 +2,7 @@
 softWhere is an app to help developers find cities that cater to their needs.
 
 ## Project Repo
-[softWhere?](https://github.com/sarahrudy/i-wanna-live-there)
+[softWhere?](https://github.com/sarahrudy/i-wanna-live-there) </br>
 [softWhere API Repo](https://github.com/sarahrudy/i-wanna-live-there-api)
 
 ## Deployed Link
