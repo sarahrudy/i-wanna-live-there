@@ -1,13 +1,30 @@
-import React from "react";
+import React, { Component } from 'react';
 import './SearchBar.css';
 
-// this will probably need to be a class component since it will hold its own state
-const SearchBar = () => {
+export default class SearchBar extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-  return(
-    <div>
-      <input type='searchbar' className='search-bar' placeholder='Search cities here...' />
-    </div>
-  )
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  // }
+
+  render() {
+    return(
+      <div>
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search cities here..."
+          value={this.props.search}
+          onChange={e => this.props.handleChange(e)}
+        />
+        <input
+          type="submit"
+          onChange={e => this.handleSubmit(e)}
+        />
+      </div>
+    )
+  }
 }
-export default SearchBar;
