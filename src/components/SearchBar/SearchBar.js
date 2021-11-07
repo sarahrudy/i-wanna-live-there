@@ -6,6 +6,10 @@ export default class SearchBar extends Component {
     super(props);
   }
 
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  // }
+
   render() {
     return(
       <div>
@@ -18,6 +22,7 @@ export default class SearchBar extends Component {
         />
         <input
           type="submit"
+          onChange={e => this.handleSubmit(e)}
         />
       </div>
     )

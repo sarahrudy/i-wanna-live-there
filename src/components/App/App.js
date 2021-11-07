@@ -11,7 +11,7 @@ class App extends Component {
     super()
     this.state = {
       cities: [],
-      search: '',
+      search: null,
       searchedCities: []
     }
   }
@@ -22,15 +22,11 @@ class App extends Component {
       .catch(error => console.log(error))
   }
 
+
+
   handleChange = (e) => {
     this.setState({ searchedCities: this.searchCities(e.target.value) });
   }
-
-  // componentDidUpdate() {
-  //   if (this.state.searchedCities !== this.state.cities) {
-  //     this.state.cities = this.searchedCities;
-  //   }
-  // }
 
   searchCities = (string) => {
     console.log('seach bar value in Search Cities', string);
