@@ -4,11 +4,23 @@ import './SearchBar.css';
 export default class SearchBar extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      search: '',
+      searchedCities: []
+    }
   }
 
-  // handleSubmit = (e) => {
-  //   e.preventDefault();
-  // }
+  handleChange = (e) => {
+    this.setState({ searchedCities: this.searchCities(e.target.value) });
+  }
+
+  searchCities = (string) => {
+    console.log('string', string)
+    let searchingCities = this.props.cities.filter(city => city.city_and_state.toLowerCase().startsWith(string.toLowerCase()));
+    console.log('searchingCities', searchingCities);
+    return searchingCities;
+    //this.setState({ searchedCities: searchingCities });
+  }
 
   render() {
     return(
@@ -17,12 +29,11 @@ export default class SearchBar extends Component {
           type="text"
           className="search-bar"
           placeholder="Search cities here..."
-          value={this.props.search}
-          onChange={e => this.props.handleChange(e)}
+          value={this.state.search}
+          onChange={e => this.handleChange(e)}
         />
         <input
           type="submit"
-          onChange={e => this.handleSubmit(e)}
         />
       </div>
     )

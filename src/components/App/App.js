@@ -12,28 +12,16 @@ class App extends Component {
     super()
     this.state = {
       cities: [],
-      search: null,
-      searchedCities: []
-      error: '',
+      search: '',
+      searchedCities: [],
+      error: ''
     }
   }
 
   componentDidMount = () => {
     getAllCities()
       .then(data => this.setState({ cities: data }))
-      .catch(error => console.log(error))
-  }
-
-
-
-  handleChange = (e) => {
-    this.setState({ searchedCities: this.searchCities(e.target.value) });
-  }
-
-  searchCities = (string) => {
-    console.log('seach bar value in Search Cities', string);
-    let searchingCities = this.state.cities.filter(city => city.city_and_state.toLowerCase().startsWith(string.toLowerCase()));
-    return this.setState({ cities: searchingCities });
+      .catch(error => this.setState({ error: error.message }))
   }
 
   render() {
@@ -43,7 +31,7 @@ class App extends Component {
         <Nav />
         <Switch>
           <Route exact path='/'>
-            <SearchBar search={this.state.search} handleChange={this.handleChange} />
+            <SearchBar cities={ this.state.cities } />
             <Cities cities={ this.state.cities } />
           </Route>
           <Route exact path='/:id' render={({ match }) => {
