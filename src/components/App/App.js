@@ -14,6 +14,7 @@ class App extends Component {
       cities: [],
       search: '',
       searchedCities: [],
+      renderingSearch: null,
       error: ''
     }
   }
@@ -32,7 +33,8 @@ class App extends Component {
         <Switch>
           <Route exact path='/'>
             <SearchBar cities={ this.state.cities } />
-            <Cities cities={ this.state.cities } />
+            {!this.renderingSearch && <Cities cities={ this.state.cities } />}
+            {this.renderingSearch && <Cities cities={ this.state.searchedCities } />}
           </Route>
           <Route exact path='/:id' render={({ match }) => {
             // const cityToRender = this.state.cities.find(city => city.id === parseInt(match.params.id))
