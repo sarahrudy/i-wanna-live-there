@@ -10,7 +10,7 @@ describe('App Home Page', () => {
 
   it('User should see a header containing the app title and description', () => {
     cy.get('header').first().contains('softWhere?');
-    cy.get('header').last().contains('Top US Cities to Live as a Software Developer');
+    cy.get('header').last().contains('TOP US CITIES TO LIVE AS A SOFTWARE DEVELOPER');
   });
 
   it('User should see all available city cards when the page loads', () => {
@@ -25,10 +25,10 @@ describe('App Home Page', () => {
 
 
   it('User should be able to type in the search bar and see the cities filtered on the page', () => {
-    cy.get('input[type=searchbar]').type('D')
-    cy.get('.cities-container').children().should('have.length', 3)
-
-    cy.get('input[type=searchbar]').type('e')
+    cy.get('input[type=text]').type('D')
     cy.get('.cities-container').children().should('have.length', 1)
+
+    cy.get('input[type=text]').type('e').clear()
+    cy.get('.cities-container').children().should('have.length', 4)
   })
 });
