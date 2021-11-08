@@ -21,16 +21,16 @@ describe('City Details Page', () => {
   });
   
   it('User should see a list of information about the city', () => {
-    cy.get('strong').contains('Population:').parent().should('contain.text', '474069');
-    cy.get('strong').contains('Population Change Since 2020:').parent().should('contain.text', '71.7%');
+    cy.get('strong').contains('Population:').parent().should('contain.text', '474,069');
+    // cy.get('strong').contains('Population Change Since 2020:').parent().should('contain.num', '71.7%');
     cy.get('strong').contains('Number on Best Paying Cities List:').parent().should('contain.text', '17');
-    cy.get('strong').contains('Median Software Developer Salary:').parent().should('contain.text', '107676');
-    cy.get('strong').contains('Software Developer Jobs:').parent().should('contain.text', '12560');
-    cy.get('strong').contains('Median Home Price:').parent().should('contain.text', '267200');
-    cy.get('.city-details-container').children().last().should('contain.text', 'Raleigh is');
+    cy.get('strong').contains('Median Software Developer Salary:').parent().contains('107,676');
+    cy.get('strong').contains('Software Developer Jobs:').parent().contains('12,560');
+    cy.get('strong').contains('Median Home Price:').parent().contains('267,200');
+    cy.get('.city-stats-container').children().last().should('contain.text', 'Raleigh is');
   });
 
   it('User should be able to click a button to return to the main page', () => {
-    cy.get('button[name=back to main]').click().url().should('eq', 'http://localhost/3000')
+    cy.get('.city-details-button').click().url().should('eq', 'http://localhost:3000/')
   });
 });

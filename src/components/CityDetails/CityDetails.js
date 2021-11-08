@@ -44,6 +44,7 @@ class CityDetails extends Component {
           </article>
           <Link to="/" className='city-details-button'>◀ BACK TO ALL CITIES</Link>
         </div>
+        }
       </section>
     )
   }
