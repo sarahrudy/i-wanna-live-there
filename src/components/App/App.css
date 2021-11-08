@@ -7,10 +7,14 @@
 
 body,
 html {
-  background: #484f58;
-  color: #f0f6fc;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(199, 211, 227, 0.5), rgba(199, 211, 227, 0.5)),
+  url('../../images/foggy-city3.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-main {
-  background-image: url('../../images/city-lights-background-image.png');
-}
+
+

@@ -6,7 +6,7 @@ const CityCard = ({ image, city }) => {
   return (
     <div className='city-card'>
       <article className="city-card-container">
-        <p>{ city }</p>
+        <p className="city-card-title">{ city }</p>
         <img className='city-card-image' src={ image } alt='city' />
       </article>
     </div>

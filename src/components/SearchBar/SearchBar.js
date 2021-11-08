@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SearchBar.css';
+import searchIcon from '../../images/search.png'
 
 export default class SearchBar extends Component {
   constructor(props) {
@@ -16,7 +17,8 @@ export default class SearchBar extends Component {
 
   render() {
     return(
-      <div>
+      <div className='search-bar-container'>
+        <img src={ searchIcon } className='search-icon' alt='search button'></img>
         <input
           type="text"
           className="search-bar"
