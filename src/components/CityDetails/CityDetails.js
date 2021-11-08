@@ -7,7 +7,7 @@ class CityDetails extends Component {
     super()
     this.state = {
       city: {},
-      error: '',
+      error: ''
     }
   }
 
