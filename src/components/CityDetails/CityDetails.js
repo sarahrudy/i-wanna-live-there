@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getSingleCity } from '../../apiCalls';
 import './CityDetails.css';
+
 class CityDetails extends Component {
   constructor() {
     super()
@@ -14,7 +15,6 @@ class CityDetails extends Component {
     try {
       const fetchedCity = await getSingleCity(this.props.id)
       this.setState({ city: fetchedCity[0] })
-      console.log(this.state.city)
     } catch {
       this.setState({ error: "Oops!" })
     }
@@ -24,16 +24,20 @@ class CityDetails extends Component {
     return (
       <section className="city-details">
         <div className="city-details-container">
-          <h2>{ this.state.city.city_and_state }</h2>
-          <img className="city-details-image" src={ this.state.city.image } alt={ this.state.city.city_and_state } />
-          <p>Population: { this.state.city.population_2019 }</p>
-          <p>Population Change Since 2020: { this.state.city.population_change_since_2020 } </p>
-          <p>Number on Best Paying Cities List: { this.state.city.num_on_best_paying_cities_list }</p>
-          <p>Median Software Developer Salary: { this.state.city.median_software_developer_salary_adj }</p>
-          <p>Software Developer Jobs: { this.state.city.num_software_developer_jobs }</p>
-          <p>Median Home Price: { this.state.city.median_home_price }</p>
-          <p>Big Software Companies: { this.state.city.big_companies }</p>
-          <p>{ this.state.city.city_blurb }</p>
+          <div className="city-image-container">
+            <h2 className="city-details-title">{ this.state.city.city_and_state }</h2>
+            <img className="city-details-image" src={ this.state.city.image } alt={ this.state.city.city_and_state } />
+          </div>
+          <article className="city-stats-container">
+            <h3><strong>Number on Best Paying Cities List: </strong>{ this.state.city.num_on_best_paying_cities_list }</h3>
+            <h3><strong>Population: </strong>{ this.state.city.population_2019 }</h3>
+            <h3><strong>Population Change Since 2020: </strong> { this.state.city.population_change_since_2020 } </h3>
+            <h3><strong>Median Software Developer Salary: </strong>{ this.state.city.median_software_developer_salary_adj }</h3>
+            <h3><strong>Software Developer Jobs: </strong> { this.state.city.num_software_developer_jobs }</h3>
+            <h3><strong>Median Home Price: </strong>{ this.state.city.median_home_price }</h3>
+            <br/>
+            <h3>{ this.state.city.city_blurb }</h3>
+          </article>
         </div>
       </section>
     )
