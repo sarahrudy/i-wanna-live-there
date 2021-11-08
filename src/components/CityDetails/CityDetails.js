@@ -9,16 +9,20 @@ class CityDetails extends Component {
     this.state = {
       city: {},
       error: '',
+      isLoading: true
     }
   }
 
-  componentDidMount = async() => {
-    try {
-      const fetchedCity = await getSingleCity(this.props.id)
-      this.setState({ city: fetchedCity[0] })
-    } catch {
-      this.setState({ error: "Oops!" })
-    }
+  componentDidMount = () => {
+    getSingleCity(this.props.id)
+      .then(data => {
+        this.setState({ city: data[0] })
+        this.setState({ isLoading: false })
+      })
+      .catch(error => {
+        this.setState({ error: error.message })
+        this.setState({ isLoading: false })
+      })
   }
 
   render() {
