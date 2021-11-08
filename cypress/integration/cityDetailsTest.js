@@ -9,7 +9,7 @@ describe('City Details Page', () => {
 
   it('User should still see the app header with the title and description', () => {
     cy.get('header').first().contains('softWhere?');
-    cy.get('header').last().contains('Top US Cities to Live as a Software Developer');
+    cy.get('header').last().contains('TOP US CITIES TO LIVE AS A SOFTWARE DEVELOPER');
   });
 
   it('User should see a header text indicating the city clicked on', () => {
@@ -21,13 +21,12 @@ describe('City Details Page', () => {
   });
   
   it('User should see a list of information about the city', () => {
-    cy.get('p').contains('Population:').should('contain.text', '474069');
-    cy.get('p').contains('Population Change Since 2020:').should('contain.text', '71.7%');
-    cy.get('p').contains('Number on Best Paying Cities List:').should('contain.text', '17');
-    cy.get('p').contains('Median Software Developer Salary:').should('contain.text', '107676');
-    cy.get('p').contains('Software Developer Jobs:').should('contain.text', '12560');
-    cy.get('p').contains('Median Home Price:').should('contain.text', '267200');
-    cy.get('p').contains('Big Software Companies:').should('contain.text', 'IBM');
+    cy.get('strong').contains('Population:').parent().should('contain.text', '474069');
+    cy.get('strong').contains('Population Change Since 2020:').parent().should('contain.text', '71.7%');
+    cy.get('strong').contains('Number on Best Paying Cities List:').parent().should('contain.text', '17');
+    cy.get('strong').contains('Median Software Developer Salary:').parent().should('contain.text', '107676');
+    cy.get('strong').contains('Software Developer Jobs:').parent().should('contain.text', '12560');
+    cy.get('strong').contains('Median Home Price:').parent().should('contain.text', '267200');
     cy.get('.city-details-container').children().last().should('contain.text', 'Raleigh is');
   });
 
