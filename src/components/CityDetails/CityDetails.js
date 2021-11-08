@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getSingleCity } from '../../apiCalls';
 import './CityDetails.css';
+import { Link } from 'react-router-dom'
 
 class CityDetails extends Component {
   constructor() {
@@ -38,6 +39,7 @@ class CityDetails extends Component {
             <br/>
             <h3>{ this.state.city.city_blurb }</h3>
           </article>
+          <Link to="/" className='city-details-button'>◀ BACK TO ALL CITIES</Link>
         </div>
       </section>
     )
