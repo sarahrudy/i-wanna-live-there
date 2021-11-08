@@ -11,7 +11,7 @@ export const getSingleCity = (id) => {
 export const checkError = (response) => {
   if (!response.ok) {
     throw new Error (
-      "Sorry...something went wrong with the server. Please try again."
+      `Sorry! ${response.status}: ${response.status.text}. Please try again!`
     )
   } else {
     return response.json()
