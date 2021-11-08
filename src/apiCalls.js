@@ -9,9 +9,10 @@ export const getSingleCity = (id) => {
 }
 
 export const checkError = (response) => {
+  console.log(response)
   if (!response.ok) {
     throw new Error (
-      `Sorry! ${response.status}: ${response.status.text}. Please try again!`
+      `Sorry! ${response.status}: ${response.statusText}. Please try again!`
     )
   } else {
     return response.json()

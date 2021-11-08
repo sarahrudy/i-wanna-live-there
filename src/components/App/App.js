@@ -47,17 +47,19 @@ class App extends Component {
           {this.state.isLoading &&
             <img className="loading-icon" src={loadingIcon} alt="page is loading" />
           }
-        <Switch>
-          <Route exact path='/'>
-          {this.state.searchedCities.length ?
-            <Cities cities={ this.state.searchedCities } /> :
-            <Cities cities={ this.state.cities } />
+          {this.state.cities &&
+            <Switch>
+              <Route exact path='/'>
+              {this.state.searchedCities.length ?
+                <Cities cities={ this.state.searchedCities } /> :
+                <Cities cities={ this.state.cities } />
+              }
+              </Route>
+              <Route exact path='/:id' render={ ({ match }) => {
+                return <CityDetails id={match.params.id} />
+              }} />
+            </Switch>
           }
-          </Route>
-          <Route exact path='/:id' render={ ({ match }) => {
-            return <CityDetails id={match.params.id} />
-          }} />
-        </Switch>
       </main>
     )
   }
