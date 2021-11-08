@@ -6,6 +6,7 @@ import Cities from '../Cities/Cities';
 import SearchBar from '../SearchBar/SearchBar';
 import CityDetails from '../CityDetails/CityDetails';
 import { getAllCities } from '../../apiCalls';
+import Error from '../Error/Error'
 
 class App extends Component {
   constructor() {
@@ -42,9 +43,9 @@ class App extends Component {
             }
           </Route>
           <Route exact path='/:id' render={({ match }) => {
-            // const cityToRender = this.state.cities.find(city => city.id === parseInt(match.params.id))
             return <CityDetails id={(match.params.id)} />
           }} />
+          <Route component={ Error } />
         </Switch>
       </main>
     )
