@@ -1,0 +1,19 @@
+.error-message {
+  color: #34313f;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 20px;
+}
+
+.go-back-to-cities {
+  border: 3px solid #403e4f;
+  background-color: white;
+  padding: 5px;
+  margin: 10px;
+  color: #403e4f;
+}
+
+.go-back-to-cities:hover {
+  background-color: #403e4f;
+  color: white;
+}

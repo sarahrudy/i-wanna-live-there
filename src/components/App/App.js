@@ -6,6 +6,7 @@ import Cities from '../Cities/Cities';
 import SearchBar from '../SearchBar/SearchBar';
 import CityDetails from '../CityDetails/CityDetails';
 import { getAllCities } from '../../apiCalls';
+import Error from '../Error/Error'
 import loadingIcon from '../../images/loading.gif';
 
 class App extends Component {
