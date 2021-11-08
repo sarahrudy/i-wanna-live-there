@@ -6,6 +6,7 @@ import Cities from '../Cities/Cities';
 import SearchBar from '../SearchBar/SearchBar';
 import CityDetails from '../CityDetails/CityDetails';
 import { getAllCities } from '../../apiCalls';
+import loadingIcon from '../../images/loading.gif';
 
 class App extends Component {
   constructor() {
@@ -13,15 +14,21 @@ class App extends Component {
     this.state = {
       cities: [],
       searchedCities: [],
-      renderingSearch: false,
+      isLoading: true,
       error: ''
     }
   }
 
   componentDidMount = () => {
     getAllCities()
-      .then(data => this.setState({ cities: data }))
-      .catch(error => this.setState({ error: error.message }))
+      .then(data => {
+        this.setState({ cities: data })
+        this.setState({ isLoading: false })
+      })
+      .catch(error => {
+        this.setState({ error: error.message })
+        this.setState({ isLoading: false })
+      })
   }
 
   searchCities = (string) => {
@@ -36,13 +43,18 @@ class App extends Component {
         <Switch>
           <Route exact path='/'>
             <SearchBar searchCities={ this.searchCities } />
+            {this.state.error &&
+              <h2>{ this.state.error }</h2>
+            }
+            {this.state.isLoading &&
+              <img className="loading-icon" src={loadingIcon} alt="page is loading" />
+            }
             {this.state.searchedCities.length ?
-              <Cities cities={this.state.searchedCities} /> :
-              <Cities cities={this.state.cities} />
+              <Cities cities={ this.state.searchedCities } /> :
+              <Cities cities={ this.state.cities } />
             }
           </Route>
           <Route exact path='/:id' render={({ match }) => {
-            // const cityToRender = this.state.cities.find(city => city.id === parseInt(match.params.id))
             return <CityDetails id={(match.params.id)} />
           }} />
         </Switch>
