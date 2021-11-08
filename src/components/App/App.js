@@ -12,9 +12,8 @@ class App extends Component {
     super()
     this.state = {
       cities: [],
-      search: '',
       searchedCities: [],
-      renderingSearch: null,
+      renderingSearch: false,
       error: ''
     }
   }
@@ -25,16 +24,22 @@ class App extends Component {
       .catch(error => this.setState({ error: error.message }))
   }
 
+  searchCities = (string) => {
+    let filteredCities = this.state.cities.filter(city => city.city_and_state.toLowerCase().startsWith(string.toLowerCase()));
+    this.setState({ searchedCities: filteredCities });
+  }
+
   render() {
-    // add error handling here, like if !this.state.error and there are no movies yet, show a loading message
     return (
       <main className="app">
         <Nav />
         <Switch>
           <Route exact path='/'>
-            <SearchBar cities={ this.state.cities } />
-            {!this.renderingSearch && <Cities cities={ this.state.cities } />}
-            {this.renderingSearch && <Cities cities={ this.state.searchedCities } />}
+            <SearchBar searchCities={ this.searchCities } />
+            {this.state.searchedCities.length ?
+              <Cities cities={this.state.searchedCities} /> :
+              <Cities cities={this.state.cities} />
+            }
           </Route>
           <Route exact path='/:id' render={({ match }) => {
             // const cityToRender = this.state.cities.find(city => city.id === parseInt(match.params.id))
