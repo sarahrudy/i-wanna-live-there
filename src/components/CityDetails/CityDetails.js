@@ -25,10 +25,8 @@ class CityDetails extends Component {
     return (
       <section className="city-details">
         <div className="city-details-container">
-          <div className="city-image-container">
-            <h2 className="city-details-title">{ this.state.city.city_and_state }</h2>
-            <img className="city-details-image" src={ this.state.city.image } alt={ this.state.city.city_and_state } />
-          </div>
+          <h2 className="city-details-title">{ this.state.city.city_and_state }</h2>
+          <img className="city-details-image" src={ this.state.city.image } alt={ this.state.city.city_and_state } />
           <article className="city-stats-container">
             <h3><strong>Number on Best Paying Cities List: </strong>{ this.state.city.num_on_best_paying_cities_list }</h3>
             <h3><strong>Population: </strong>{ this.state.city.population_2019 }</h3>
