@@ -28,6 +28,8 @@ class CityDetails extends Component {
   render() {
     return (
       <section className="city-details">
+        {this.state.error && <h2>{this.state.error}</h2>}
+        {this.state.city &&
         <div className="city-details-container">
           <h2 className="city-details-title">{ this.state.city.city_and_state }</h2>
           <img className="city-details-image" src={ this.state.city.image } alt={ this.state.city.city_and_state } />
