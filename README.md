@@ -47,14 +47,14 @@ Check out the API repo we built first below:
 ## ELISE:
 **GOALS...**
 - Investigate best practices for building a database schema
-- Gain competence with foundational database build & test technologies
-- - PostgreSQL, Postico, Postman, KnexJS, ExpressJS, Heroku
+- Gain competence with foundational database build & test technologies:
+  - PostgreSQL, Postico, Postman, KnexJS, ExpressJS, Heroku
 
 **NEXT STEPS...**
 - Skill-building repetition
-- Implementing increased functionality
-- - Relational databases
-- - POST or PATCH
+- Implementing increased functionality:
+  - Relational databases
+  - POST or PATCH
 
 ## SARAH:
 - Learn how to build a backend API
