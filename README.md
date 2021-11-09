@@ -48,7 +48,7 @@ Elise:
 - 
 
 Sarah:
-- Learn how to build an API
+- Learn how to build a backend API
 
 Logan:
 - 
