@@ -41,7 +41,6 @@ class App extends Component {
     return (
       <main className="app">
         <Nav />
-        <SearchBar searchCities={ this.searchCities } />
           {this.state.error &&
             <h2>{ this.state.error }</h2>
           }
@@ -51,10 +50,17 @@ class App extends Component {
           {this.state.cities &&
             <Switch>
               <Route exact path='/'>
-              {this.state.searchedCities.length ?
-                <Cities cities={ this.state.searchedCities } /> :
-                <Cities cities={ this.state.cities } />
-              }
+              {this.state.searchedCities.length 
+                ?
+               <>
+                <SearchBar searchCities={ this.searchCities } />
+                <Cities cities={ this.state.searchedCities } /> 
+               </>
+                :
+                <>
+                <SearchBar searchCities={ this.searchCities } />
+                <Cities cities={ this.state.cities } /> 
+                </> }
               </Route>
               <Route exact path='/:id' render={ ({ match }) => {
                 return <CityDetails id={match.params.id} />
