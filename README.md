@@ -38,27 +38,27 @@ Check out the API repo we built first below:
 
 
 ## Learning Goals
-# Team Goals:
+## Team Goals:
 - Incorporate new technologies to practice self learning 
 - Create a functional API and database
 - Test user flow and API requests
 - Create a multi-page UX using Router
 ---
-# Elise:
-**GOALS:**
+## ELISE:
+**GOALS...**
 - Investigate best practices for building a database schema
 - Gain competence with foundational database build & test technologies
 - - PostgreSQL, Postico, Postman, KnexJS, ExpressJS, Heroku
-**NEXT STEPS:**
+**NEXT STEPS...**
 - Skill-building repetition
 - Implementing increased functionality
 - - Relational databases
 - - POST or PATCH
 
-Sarah:
+## SARAH:
 - Learn how to build a backend API
 
-Logan:
+## LOGAN:
 - 
 ---
 
