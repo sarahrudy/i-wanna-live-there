@@ -10,7 +10,7 @@ const Cities = ({ cities }) => {
           <CityCard
             image={city.image}
             city={city.city_and_state}
-            key={city.id}
+            key={city.population_2019}
           />
         </NavLink>
       </div>

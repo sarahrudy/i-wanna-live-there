@@ -6,7 +6,6 @@ import Cities from '../Cities/Cities';
 import SearchBar from '../SearchBar/SearchBar';
 import CityDetails from '../CityDetails/CityDetails';
 import { getAllCities } from '../../apiCalls';
-import Error from '../Error/Error'
 import loadingIcon from '../../images/loading.gif';
 
 class App extends Component {
@@ -15,23 +14,16 @@ class App extends Component {
     this.state = {
       cities: [],
       searchedCities: [],
-      isLoading: true,
       error: ''
     }
   }
 
-  componentDidMount = () => {
+   componentDidMount() {
     getAllCities()
-      .then(data => {
-        this.setState({ cities: data })
-        this.setState({ isLoading: false })
-      })
-      .catch(error => {
-        this.setState({ error: error })
-        this.setState({ isLoading: false })
-      })
+      .then(cities => this.setState({ cities: cities }))
+      .catch(error => this.setState({ error: error }))
   }
-
+ 
   searchCities = (string) => {
     let filteredCities = this.state.cities.filter(city => city.city_and_state.toLowerCase().startsWith(string.toLowerCase()));
     this.setState({ searchedCities: filteredCities });
@@ -41,10 +33,8 @@ class App extends Component {
     return (
       <main className="app">
         <Nav />
-          {this.state.error &&
-            <h2>{ this.state.error }</h2>
-          }
-          {this.state.isLoading &&
+          {this.state.error && <h2>{ this.state.error }</h2>}
+          {!this.state.error && !this.state.cities.length &&
             <img className="loading-icon" src={loadingIcon} alt="page is loading" />
           }
           {this.state.cities &&
@@ -64,7 +54,7 @@ class App extends Component {
               </Route>
               <Route exact path='/:id' render={ ({ match }) => {
                 return <CityDetails id={match.params.id} />
-              }} />
+              }} /> 
             </Switch>
           }
       </main>
