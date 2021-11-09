@@ -23,7 +23,7 @@ class CityDetails extends Component {
         {this.state.error 
           ? 
           <>
-          <h2>{this.state.error}</h2> 
+          <h2 className="error-h2">{this.state.error}</h2> 
           <Link to="/" className='city-details-button'>◀ BACK TO ALL CITIES</Link>
           </>
           :
