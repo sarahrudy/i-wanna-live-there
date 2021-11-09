@@ -1,7 +1,7 @@
 ![softwhere](https://user-images.githubusercontent.com/78389005/140847121-2bd5e432-bca0-46f7-a761-3d5b375b3525.gif)
 
 # softWhere?
-`softWhere?` is an interactive web application that has a list of the top 20 cities for software developers to explore so they can find a city that caters to their needs. This project was part of an assignment where we were given the freedom to choose a new technology none of us had tried before. The goal of the project is to really push students to research and explore on our own and exhibit our ability to learn and apply new technologies quickly. We chose backend as our stretch technology so we first built an API using Node, Express, PostgreSQL, Knex, and Heroku, then we built `softWhere?` using React. 
+`softWhere?` is an interactive web application that lists the top 20 cities for software developers to explore so they can find a city that caters to their needs. This project was part of an assignment where we are given the freedom to choose a new technology none of us had tried before. The goal of the project is to really push students to research and explore on our own and exhibit our ability to learn and apply new technologies quickly. We chose backend as our stretch technology so we first built an API using Node, Express, PostgreSQL, Knex, and Heroku, then we built `softWhere?` using React. 
 
 `softWhere?` allows a user to search cities through a live search function to display cities on the page. After a user clicks on a city they're interested in, they are redirected to a page that displays specific information on that city including the city population, software developer jobs available, the median income for a software developer in that area, etc. 
 
