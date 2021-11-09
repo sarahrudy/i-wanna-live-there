@@ -89,5 +89,7 @@ None of the team members on this project had ever worked with backend technologi
 
 ## Future Additions
 - Filter or rank cities based on an individual user and their preferences
-- Search based on specific details or categories
+- Search based on specific details or categories (i.e. 'skiing')
 - Save favorite cities
+- Sorting/filtering (i.e. 'cost-of-living' returns sorted array)
+- Create second table of companies that builds profiles for each
