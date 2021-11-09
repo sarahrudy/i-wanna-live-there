@@ -49,6 +49,7 @@ Check out the API repo we built first below:
 - Investigate best practices for building a database schema
 - Gain competence with foundational database build & test technologies
 - - PostgreSQL, Postico, Postman, KnexJS, ExpressJS, Heroku
+
 **NEXT STEPS...**
 - Skill-building repetition
 - Implementing increased functionality
