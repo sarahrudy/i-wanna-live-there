@@ -60,7 +60,9 @@ Check out the API repo we built first below:
 - Learn how to build a backend API
 
 ## LOGAN:
-- 
+- Learn more about requirements for backend data flow
+- Understand the role that each technology has in running a backend
+- Get better at handling errors in React
 ---
 
 
