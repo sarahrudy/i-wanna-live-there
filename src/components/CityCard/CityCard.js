@@ -1,7 +1,6 @@
 import React from "react";
 import './CityCard.css';
 
-// change this component name to CityCard because it's singular 
 const CityCard = ({ image, city }) => {
   return (
     <div className='city-card'>
