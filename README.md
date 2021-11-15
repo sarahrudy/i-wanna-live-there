@@ -6,8 +6,8 @@
 `softWhere?` allows a user to search cities through a live search function to display cities on the page. After a user clicks on a city they're interested in, they are redirected to a page that displays specific information on that city including the city population, software developer jobs available, the median income for a software developer in that area, etc. 
 
 ## API Repo
-Check out the API repo we built first below:
-[softWhere API Repo](https://github.com/sarahrudy/i-wanna-live-there-api)
+Check out the API repo we built first:
+[softWhere API Repo](https://github.com/sarahrudy/cities-api)
 
 ## Deployed Link
 [softwhere-pun.herokuapp.com](https://softwhere-pun.herokuapp.com/)
