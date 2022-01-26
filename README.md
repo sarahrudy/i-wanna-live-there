@@ -57,7 +57,14 @@ Check out the API repo we built first:
   - POST or PATCH
 
 ## SARAH:
-- Learn how to build a backend API
+**GOALS...**
+- Learn how to build a backend API using PostgreSQL, Postico, Postman, KnexJS, and ExpressJS
+- Self-teach through research and understanding
+- Create endpoints to query when building frontend application 
+- Deploy using Heroku
+
+**NEXT STEPS...**
+- Ability to POST new city to database
 
 ## LOGAN:
 - Learn more about requirements for backend data flow
